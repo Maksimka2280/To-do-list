@@ -1,5 +1,5 @@
 const input = document.querySelector('input');
-const list = document.querySelector('ul');
+const list = document.querySelector('#list');
 let liCount = 0; 
 
 input.addEventListener('keyup', (event) => {
@@ -21,8 +21,7 @@ input.addEventListener('keyup', (event) => {
             li.classList.toggle('done');
         });
 
-        li.addEventListener('contextmenu', (event) => {
-            event.preventDefault();
+        li.querySelector("i").addEventListener('click', () => {
             list.removeChild(li);
             liCount--; 
         });

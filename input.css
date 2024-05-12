@@ -36,35 +36,56 @@
     position: relative;
     display: flex;
     align-items: center;
-    background: #1d6dc9;
+    background: #2f80dd;
     margin: 15px 0;
-    padding: 10px ;
+    padding: 10px 10px 10px 45px ;
     color: aliceblue;
     cursor: pointer;
-    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
     border-radius: 30px;
-  }
+    box-shadow: inset -5px -4px 10px rgba(0, 0, 0, 0.5),
+    7px 6px 10px rgba(0, 0, 0, 0.4);
+ 
+}
+
+ .main-header__container li:before{ 
+   content: '';
+   position: absolute;
+   left: 8px;
+   width: 30px;
+   height: 30px;
+   background: #2f363e;
+   border-radius: 50%;
+
+}
+
+
+
   
   .main-header__container li .icon {
     position: absolute;
     width: 40px;
     height: 40px;
-    background: #b93434;
+    background: #d10f60;
     border-radius: 50%;
     left: calc(105% + 10px); 
     transform: translate(-40%, 0%);
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: inset 1px 1px 10px rgba(0, 0, 0, 0.7),
+    -1px -1px 10px rgba(0, 0, 0, 0.4);
+
+
   }
   
   .main-header__container li .icon::before,
   .main-header__container li .icon::after {
     content: "";
     position: absolute;
-    width: 70%;
+    width: 50%;
     height: 3px;
     background-color: #fff; 
+   
   }
   
   .main-header__container li .icon::before {
@@ -75,3 +96,18 @@
     transform: rotate(-45deg);
   }
   
+   .main-header__container li.done{
+    background: #777074;
+    
+   }
+   
+   .main-header__container li.done::after {
+    content: '\2713'; 
+    font-size: 20px; 
+    color: #f8f8f8; 
+    position: absolute;
+    left: 15px; 
+    top: 50%; 
+    transform: translateY(-50%); 
+}
+
